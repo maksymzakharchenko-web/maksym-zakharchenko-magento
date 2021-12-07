@@ -2,10 +2,20 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock name="top.links">
+            <block class="MaksymZ\RegularCustomer\Block\TopLink\View\Element\Html\Link" name="custom-top-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">maksymz_regular_customer/requests/view</argument>
+                    <argument name="label" xsi:type="string" translate="true">Regular Customer</argument>
+                    <argument name="sortOrder" xsi:type="number">60</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
         <referenceBlock name="footer_links">
             <block class="Magento\Framework\View\Element\Html\Link\Current" name="custom-footer-link">
                 <arguments>
-                    <argument translate="true" name="label" xsi:type="string">Loyalty program for Regular Customers</argument>
+                    <argument translate="true" name="label" xsi:type="string">Loyalty program for Regular Customers
+                    </argument>
                     <argument name="path" xsi:type="string">maksymz_regular_customer/index/formpage</argument>
                 </arguments>
             </block>
